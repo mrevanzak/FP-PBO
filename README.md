@@ -1,4 +1,4 @@
-# THE MAZE
+# HAUNTED MAZE
 > Final Project untuk mata kuliah PBO (Pemograman Berbasis Objek) kelas F
 
 ## Built by : 

@@ -218,6 +218,7 @@ public class Maze {
 					} else {
 						enemy[i].setDead(true);
 						player.addEnemyKilled();
+						player.setItemCollected(Player.SWORD, false);
 					}
 				}
 			}
@@ -275,6 +276,7 @@ public class Maze {
 							} else {
 								enemy[i].setDead(true);	
 								player.addEnemyKilled();
+								player.setItemCollected(Player.SWORD, false);
 							}
 						}
 					} 

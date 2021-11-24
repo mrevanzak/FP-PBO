@@ -161,6 +161,8 @@ public class MazeFrame {
 				
 				if (m.itemCollected(Player.SWORD)){
 					inventory.get(Player.SWORD).setVisible(true);
+				} else {
+					inventory.get(Player.SWORD).setVisible(false);
 				}
 				if (m.itemCollected(Player.KEY)){
 					inventory.get(Player.KEY).setVisible(true);

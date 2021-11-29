@@ -34,8 +34,8 @@ public class MazeFrame {
 	
 	private HashMap<String, Sprite> sprites;	
 	
-	public static final String wallSprite = "steel_wall";
-	public static final String pathSprite = "carpet";
+	public static final String wallSprite = "wall";
+	public static final String pathSprite = "rock";
 	
 	private String playerSprite;
 	public static final String LinkSprite = "link";

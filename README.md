@@ -14,3 +14,7 @@ Permainan ini dimainkan di PC dengan menggunakan control button keyboard yakni '
 
 ## Referensi 
 https://github.com/mobeigi/The-Maze-Runner
+
+## Resource
+https://opengameart.org/content/simple-tileset
+https://giphy.com/stickers/sword-fuego-espada-0VlCmTziJyHsO9RIL4

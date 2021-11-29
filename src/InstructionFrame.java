@@ -63,7 +63,7 @@ public class InstructionFrame {
 		coin.setText("Cash money, Cash money");
 		enemy.setText("Game over if you get too close");
 		enemyF.setText("Chomp them when they're looking scared like this");
-		keyboard.setText("Use the arrow keys to move around");
+		keyboard.setText("Use arrow keys or WASD to move around");
 		freeze.setText("Pick this up to freeze and eat your enemies");
 		
 		GridBagConstraints c= new GridBagConstraints();
@@ -94,7 +94,6 @@ public class InstructionFrame {
 		c.gridy= 7;
 		instructions.add(coin,c);
 		
-		c.insets = new Insets(0,120,0,0);
 		c.gridy = 8;
 		instructions.add(keyboard, c);
 		

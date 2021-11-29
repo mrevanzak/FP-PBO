@@ -47,7 +47,7 @@ public class MazeFrame {
 	public static final String coinSprite = "coin";
 	public static final String enemySprite = "cyan_pacman_monster";
 	public static final String killableEnemySprite = "dead_pacman_monster";
-	public static final String swordSprite = "master_sword";
+	public static final String swordSprite = "sword";
 	public static final String snowflakeSprite = "snowflake";
 	public static final String hintSprite = "hint";
 	

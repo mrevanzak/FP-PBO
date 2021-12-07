@@ -4,7 +4,9 @@ import javax.swing.JOptionPane;
 public class GameManager {
 	private GameFrame gameFrame;	
 	private MazeFrame mazeFrame;	
-	private Game g;		
+	private Game g;
+
+	Sound sound = new Sound();
 
 	public GameManager() {
 		g = new Game();	

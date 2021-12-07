@@ -10,6 +10,8 @@ public class Maze {
 	private int height;
 	private Player player;
 	private Enemy[] enemy;
+
+	Sound sound = new Sound();
 	
 	public Maze (int w, int h, Player p) {
 		grid = new Tile[w+2][h+2];	
@@ -223,15 +225,19 @@ public class Maze {
 				}
 			}
 			if (playerLoc.getType() == Tile.KEY) {
+				sound.playSE(2);
 				player.setItemCollected(Player.KEY, true);
 				playerLoc.setType(Tile.PATH);	
 			} else if (playerLoc.getType() == Tile.TREASURE) {
+				sound.playSE(3);
 				player.addNumTreasureCollected();
 				playerLoc.setType(Tile.PATH);	
 			} else if (playerLoc.getType() == Tile.SWORD) {
+				sound.playSE(4);
 				player.setItemCollected(Player.SWORD, true);
 				playerLoc.setType(Tile.PATH);
 			} else if (playerLoc.getType() == Tile.ICE_POWER) {
+				sound.playSE(5);
 				player.setItemCollected(Player.ICE_POWER,true);
 				playerLoc.setType(Tile.PATH);
 			}
@@ -323,7 +329,8 @@ public class Maze {
 		boolean atEnd = false;
 		if (playerLoc.getX() == (width-2) && playerLoc.getY() == (height-2)) {
 			atEnd = true;
-			if (itemCollected(Player.KEY)) {	
+			if (itemCollected(Player.KEY)) {
+				sound.playSE(6);
 				grid[width-2][height-1].setType(Tile.PATH);	
 				grid[width-2][height-1].setWalkable();
 			}

@@ -5,7 +5,7 @@ public class Game {
     private int difficulty;	
     private int score;	
     private int level;	
-    private boolean finishedLevel;	
+    private boolean finishedLevel;
     
     private volatile boolean inGame;	
     private volatile boolean isGameOver;	
@@ -17,7 +17,9 @@ public class Game {
     
     public static final int EASY = -1;
     public static final int MEDIUM = 0;
-    public static final int HARD = 1;  
+    public static final int HARD = 1;
+
+    Sound sound = new Sound();
     
     public Game() {
         isGameOver = false;
@@ -37,6 +39,8 @@ public class Game {
     
     public void setIsGameOver(boolean isGameOver) {
     	this.isGameOver = isGameOver;
+        if(isGameOver)
+            sound.stopMusic();
     }
     
     public boolean isGameOver() {
@@ -45,6 +49,8 @@ public class Game {
     
     public void setIsInGame(boolean inGame) {
     	this.inGame = inGame;
+        if(inGame)
+            sound.playMusic(0);
     }
     
     public boolean isInGame() {
@@ -106,7 +112,6 @@ public class Game {
 	}
 	
 	public void clearGame() {
-    	
     	score = 0;
     	level = 0;
 	}

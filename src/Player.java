@@ -13,7 +13,9 @@ public class Player {
 	public static final int KEY = 0;
 	public static final int SWORD = 1;
 	public static final int ICE_POWER = 2;
-	public static final int NUM_INVENTORY_ITEMS = 3; 
+	public static final int NUM_INVENTORY_ITEMS = 3;
+
+	Sound sound = new Sound();
 
 	public Player(String name, String character){
 		this.name = name;
@@ -50,6 +52,8 @@ public class Player {
 
 	public void setDead (boolean dead) {
 		isDead = dead;
+		if(dead)
+			sound.playSE(1);
 	}
 
 	public boolean isDead() {

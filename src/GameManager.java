@@ -47,11 +47,11 @@ public class GameManager {
  			JOptionPane.showOptionDialog (mazeFrame.getFrame(), "Pacman monster killed you!","OH NO!", 
  								JOptionPane.CLOSED_OPTION,JOptionPane.PLAIN_MESSAGE,
  								new ImageIcon(this.getClass().getResource("/img/dead_pacman_monster.gif")),options,options[0]);
- 			
  			g.setIsGameOver(true);	
  			g.setIsInGame(false);
  			mazeFrame.getFrame().requestFocus();	
         } else if (g.getMaze().exitedMaze()) {
+			sound.playSE(6);
 			Object[] options = {"Next level"};
 			JOptionPane.showOptionDialog (mazeFrame.getFrame(), "The next journey awaits you...\n" +
 								"What unknown challenges lay ahead?","Room " + (g.getLevel()+1) + " cleared!", 	

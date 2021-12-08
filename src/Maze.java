@@ -330,7 +330,6 @@ public class Maze {
 		if (playerLoc.getX() == (width-2) && playerLoc.getY() == (height-2)) {
 			atEnd = true;
 			if (itemCollected(Player.KEY)) {
-				sound.playSE(6);
 				grid[width-2][height-1].setType(Tile.PATH);	
 				grid[width-2][height-1].setWalkable();
 			}

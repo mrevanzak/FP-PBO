@@ -58,7 +58,7 @@ public class GameFrame {
 		
 	    c.gridy = 26;
 	    c.gridx = 3;
-	    c.insets = new Insets(0,235,0,0);
+	    c.insets = new Insets(0,200,0,0);
 	    playButton = new JButton("Play Game!");
 		this.playButton.setBackground(Color.WHITE);
 		frame.add(playButton,c); 

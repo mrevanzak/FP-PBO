@@ -3,7 +3,8 @@ public class Game {
     private Player player;	
     private Controller c;	
     private int difficulty;	
-    private int score;	
+    private int score;
+    private int HighScore;	
     private int level;	
     private boolean finishedLevel;
     
@@ -26,6 +27,7 @@ public class Game {
         inGame = false;
         
 		player = new Player("Default", "link");
+        HighScore = 0;
         score = 0;	
         level = 0;	
         difficulty = MEDIUM;	
@@ -80,6 +82,10 @@ public class Game {
 	public int getScore() {
 		return score;
 	}
+
+    public int getHighScore() {
+        return HighScore;
+    }
 
 	public void checkNextLevel () {
 		if (maze.exitedMaze()) {

@@ -5,11 +5,13 @@ import javax.swing.*;
 
 public class GameFrame {
 	private InstructionFrame instructions;
+	private AboutFrame about;
 	private JPanel optionPanel;
 	private JFrame frame;
 	
 	private JButton playButton;
 	private JButton howButton;
+	private JButton aboutButton;
 	private JButton exitButton;
 
 	public GameFrame(Game game, int width, int height) {
@@ -21,6 +23,7 @@ public class GameFrame {
 		final Game g = game;
 		this.instructions = new InstructionFrame();
 		this.optionPanel = new OptionPanel(g);
+		this.about = new AboutFrame();
 		
 		
 		frame.setSize(width, height);
@@ -45,7 +48,7 @@ public class GameFrame {
 		c.gridwidth = 4;
 		c.gridheight = 10;
 		c.gridy = 15;
-		c.gridx =3 ;
+		c.gridx = 3;
 		c.fill = GridBagConstraints.HORIZONTAL;
 		c.insets = new Insets(0,250,0,0);
 	    frame.add(linkImage, c);
@@ -55,7 +58,7 @@ public class GameFrame {
 		
 	    c.gridy = 26;
 	    c.gridx = 3;
-	    c.insets = new Insets(0,235,0,0);
+	    c.insets = new Insets(0,200,0,0);
 	    playButton = new JButton("Play Game!");
 		this.playButton.setBackground(Color.WHITE);
 		frame.add(playButton,c); 
@@ -85,9 +88,21 @@ public class GameFrame {
 			}
 		});
 
-		
-		c.gridy =26;
+		c.gridy = 26;
 	    c.gridx = 5;
+	    aboutButton = new JButton("About");
+		this.aboutButton.setBackground(Color.WHITE);
+		this.aboutButton.setEnabled(true);
+		frame.add(aboutButton,c);
+		this.aboutButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				about.setVisible(true);
+			}
+		});
+
+		
+		c.gridy = 26;
+	    c.gridx = 6;
 	    exitButton = new JButton("EXIT");
 		this.exitButton.setBackground(Color.WHITE);
 		frame.add(exitButton,c);		

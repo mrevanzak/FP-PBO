@@ -2,6 +2,8 @@ public class Enemy {
 	boolean isDead;	
 	Tile location;
 
+	Sound sound = new Sound();
+
 	public Enemy (Tile t) {
 		location = t;
 	}
@@ -12,6 +14,8 @@ public class Enemy {
 	
 	public void setDead (boolean dead) {
 		isDead = dead;
+		if(dead)
+			sound.playSE(7);
 	}
 
 	public boolean isDead() {

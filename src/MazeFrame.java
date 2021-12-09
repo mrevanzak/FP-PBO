@@ -23,7 +23,7 @@ public class MazeFrame {
 	
 	private JPanel sidePanel;
 	private JLabel score;
-	private JLabel HighScore;	
+	private JLabel highScore;	
 	private JLabel level;	
 	private JButton exitButton;	
 	private JButton hintButton;	
@@ -159,7 +159,7 @@ public class MazeFrame {
 					updateBlock(m, curPlayerPos);
 				}
 				score.setText("Score: " + Integer.toString(g.getScore()));
-				score.setText("High Score: " + Integer.toString(g.getHighScore())); 
+				highScore.setText("High Score: " + g.getHighScore()); 
 				
 				if (m.itemCollected(Player.SWORD)){
 					inventory.get(Player.SWORD).setVisible(true);
@@ -349,27 +349,27 @@ public class MazeFrame {
 		playerImage.setBorder(new EmptyBorder(new Insets(10, 10, 10, 10)));
 		playerPanel.add(playerImage);
 
-		JPanel playerStats = new JPanel(new GridLayout(4,1));
+		JPanel playerStats = new JPanel(new GridLayout(6,1));
 		JLabel name = new JLabel("Name: " + g.getPlayer().getName());
 		JLabel character = new JLabel("Character: " + g.getPlayer().getCharacter().substring(0, 1).toUpperCase() + g.getPlayer().getCharacter().substring(1));
 		score = new JLabel("Score: " + g.getScore());
-		HighScore = new JLabel("HighScore: " + g.getHighScore());
+		highScore = new JLabel("HighScore: " + g.getHighScore());
 		level = new JLabel("Level: " + (g.getLevel()+1)); 
 
 		name.setFont(new Font("Arial", Font.PLAIN, 16));
 		character.setFont(new Font("Arial", Font.PLAIN, 16));
 		score.setFont(new Font("Arial", Font.BOLD, 18));
-		HighScore.setFont(new Font("Arial", Font.BOLD, 18));
+		highScore.setFont(new Font("Arial", Font.BOLD, 20));
 		level.setFont(new Font("Arial", Font.BOLD, 18));
 
 		playerStats.add(name);
 		playerStats.add(character);
-		playerStats.add(score);
-		playerStats.add(HighScore);
 		playerStats.add(level);	
+		playerStats.add(score);
+		playerStats.add(highScore);
 		playerPanel.add(playerStats);	
 		
-		gbc.gridwidth = 4;
+		gbc.gridwidth = 5;
 		gbc.gridx = 0;
 		gbc.gridy = 0;
 		sidePanel.add(playerPanel);	

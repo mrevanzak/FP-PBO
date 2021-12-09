@@ -1,10 +1,18 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.temporal.WeekFields;
+
 public class Game {
     private Maze maze;
     private Player player;	
     private Controller c;	
     private int difficulty;	
     private int score;
-    private int HighScore;	
+    private String highScore;	
     private int level;	
     private boolean finishedLevel;
     
@@ -27,10 +35,10 @@ public class Game {
         inGame = false;
         
 		player = new Player("Default", "link");
-        HighScore = 0;
         score = 0;	
         level = 0;	
-        difficulty = MEDIUM;	
+        difficulty = MEDIUM;
+        highScore = this.getHighScore();	
     }
     
     public void createMaze() {
@@ -83,9 +91,58 @@ public class Game {
 		return score;
 	}
 
-    public int getHighScore() {
-        return HighScore;
+    public String getHighScore() { 
+        FileReader readFile = null;
+        BufferedReader reader = null;
+        try {
+            readFile = new FileReader("highscore.txt");
+            reader = new BufferedReader(readFile);
+            return reader.readLine(); 
+        }
+        catch (Exception e) {
+            return "Nobody:0"; 
+        }
+        finally {
+            try {
+                if (reader != null)
+                reader. close();
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            } 
+        } 
     }
+
+    public void checkHighScore() {
+        if(score > Integer.parseInt((highScore.split(":")[1]))) {
+            highScore = player.getName() + ":" + score;
+            File scoreFile = new File("highscore.txt");
+            if (!scoreFile.exists()) {
+                try { 
+                    scoreFile.createNewFile();
+                } catch (IOException e) { 
+                    e. printStackTrace(); 
+                } 
+            } 
+            FileWriter writeFile = null;
+            BufferedWriter writer = null;
+            try {
+                writeFile = new FileWriter(scoreFile); 
+                writer = new BufferedWriter(writeFile); 
+                writer.write(this.highScore); 
+            } 
+            catch (Exception e) { 
+                //errors 
+            } 
+            finally { 
+                try { 
+                    if (writer != null) 
+                    writer. close(); 
+                } catch (Exception e) {} 
+            }
+            
+        }
+    } 
 
 	public void checkNextLevel () {
 		if (maze.exitedMaze()) {

@@ -14,6 +14,7 @@ Permainan ini dimainkan di PC dengan menggunakan control button keyboard yakni '
 
 ## Referensi 
 https://github.com/mobeigi/The-Maze-Runner
+https://www.youtube.com/watch?v=8gMd0ftWp_Y
 
 ## Resource
 https://opengameart.org/content/simple-tileset

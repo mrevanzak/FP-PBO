@@ -47,6 +47,7 @@ public class GameManager {
  			JOptionPane.showOptionDialog (mazeFrame.getFrame(), "Pacman monster killed you!","OH NO!", 
  								JOptionPane.CLOSED_OPTION,JOptionPane.PLAIN_MESSAGE,
  								new ImageIcon(this.getClass().getResource("/img/dead_pacman_monster.gif")),options,options[0]);
+			g.checkHighScore();
  			g.setIsGameOver(true);	
  			g.setIsInGame(false);
  			mazeFrame.getFrame().requestFocus();	

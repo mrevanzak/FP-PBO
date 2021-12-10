@@ -13,9 +13,9 @@ The Haunted Maze adalah game puzzle labirin klasik yang bertipe single player da
 Permainan ini dimainkan di PC dengan menggunakan control button keyboard yakni 'W', 'A', 'S', 'D' atau Arrow Button untuk menjalankan player. Game ini dilengkapi dengan level up system yang akan menjadi daya tarik bagi pemain untuk mengasah logika dan keterampilan dalam menyelesaikan variasi tantangan.
 
 ## Referensi 
-https://github.com/mobeigi/The-Maze-Runner
+https://github.com/mobeigi/The-Maze-Runner\
 https://www.youtube.com/watch?v=8gMd0ftWp_Y
 
 ## Resource
-https://opengameart.org/content/simple-tileset
+https://opengameart.org/content/simple-tileset\
 https://giphy.com/stickers/sword-fuego-espada-0VlCmTziJyHsO9RIL4

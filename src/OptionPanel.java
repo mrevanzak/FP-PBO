@@ -12,9 +12,9 @@ import javax.swing.JTextField;
 public class OptionPanel extends JPanel {
 	private static final long serialVersionUID = 1L;
 	
-	private JButton setLink;	
-	private JButton setWilliam;
-	private JButton setKainen;
+	private JButton setMax;
+	private JButton setPeter;
+	private JButton setVira;
 	private JTextField nameField;	
 	
 	private JRadioButton easyDifficulty;	
@@ -26,41 +26,41 @@ public class OptionPanel extends JPanel {
 		this.setLayout(new GridBagLayout());		
 		GridBagConstraints gbc = new GridBagConstraints();
 		
-		Sprite linkPanel = new Sprite(MazeFrame.LinkSprite, 48, 48);
-		Sprite williamPanel = new Sprite(MazeFrame.WilliamSprite, 48, 48);
-		Sprite kainenPanel = new Sprite(MazeFrame.KainenSprite, 48, 48);
+		Sprite maxPanel = new Sprite(MazeFrame.MaxSprite, 48, 48);
+		Sprite peterPanel = new Sprite(MazeFrame.PeterSprite, 35, 48);
+		Sprite viraPanel = new Sprite(MazeFrame.ViraSprite, 40, 48);
 		
-		setLink = new JButton("Link - The Legend", linkPanel.getSprite() );
-		setWilliam = new JButton("William - The Knight", williamPanel.getSprite());
-		setKainen = new JButton("Kainen - The Dark Prince", kainenPanel.getSprite());
+		setMax = new JButton("Max - The Handsome", maxPanel.getSprite() );
+		setPeter = new JButton("Peter - The Brave", peterPanel.getSprite());
+		setVira = new JButton("Vira - The Beauty", viraPanel.getSprite());
 
-		setLink.addActionListener(new ActionListener() {
+		setMax.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
-				game.getPlayer().setCharacter(MazeFrame.LinkSprite);
+				game.getPlayer().setCharacter(MazeFrame.MaxSprite);
 			}
 		});
-		setWilliam.addActionListener(new ActionListener() {
+		setPeter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
-				game.getPlayer().setCharacter(MazeFrame.WilliamSprite);
+				game.getPlayer().setCharacter(MazeFrame.PeterSprite);
 			}
 		});
-		setKainen.addActionListener(new ActionListener() {
+		setVira.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
-				game.getPlayer().setCharacter(MazeFrame.KainenSprite);
+				game.getPlayer().setCharacter(MazeFrame.ViraSprite);
 			}
 		});;
-		this.add(setLink);	
-		this.add(setWilliam);
-		this.add(setKainen);
+		this.add(setMax);
+		this.add(setPeter);
+		this.add(setVira);
 		
-		nameField = new JTextField("Enter Name");
+		nameField = new JTextField("");
 		nameField.setPreferredSize(new Dimension(200,20));
 
 		gbc.gridy = 1;
-		gbc.gridx = 0;
+		gbc.gridx = 1;
 		gbc.insets = new Insets(20,20,0,0);
 		
-		JLabel nameText = new JLabel("Introduce yourself, Champion: ");
+		JLabel nameText = new JLabel(String.format("Enter name"));
 		this.add(nameText, gbc);
 		
 		gbc.gridx = 1;

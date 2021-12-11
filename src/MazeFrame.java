@@ -39,9 +39,9 @@ public class MazeFrame {
 	public static final String pathSprite = "rock";
 	
 	private String playerSprite;
-	public static final String LinkSprite = "link";
-	public static final String WilliamSprite = "william";
-	public static final String KainenSprite = "kainen";
+	public static final String MaxSprite = "max";
+	public static final String PeterSprite = "peter";
+	public static final String ViraSprite = "vira";
 
 	public static final String doorSprite = "locked_door";
 	public static final String keySprite = "key";

@@ -43,8 +43,8 @@ public class GameManager {
         this.mazeFrame.getFrame().repaint();
  
         if (g.getPlayer().isDead()) {
- 			Object[] options = {"End campaign"};
- 			JOptionPane.showOptionDialog (mazeFrame.getFrame(), "Pacman monster killed you!","OH NO!", 
+ 			Object[] options = {"Main menu"};
+ 			JOptionPane.showOptionDialog (mazeFrame.getFrame(), "The ghost got you!","OH NO!", 
  								JOptionPane.CLOSED_OPTION,JOptionPane.PLAIN_MESSAGE,
  								new ImageIcon(this.getClass().getResource("/img/dead_pacman_monster.gif")),options,options[0]);
 			g.checkHighScore();
@@ -53,9 +53,9 @@ public class GameManager {
  			mazeFrame.getFrame().requestFocus();	
         } else if (g.getMaze().exitedMaze()) {
 			sound.playSE(6);
-			Object[] options = {"Next level"};
-			JOptionPane.showOptionDialog (mazeFrame.getFrame(), "The next journey awaits you...\n" +
-								"What unknown challenges lay ahead?","Room " + (g.getLevel()+1) + " cleared!", 	
+			Object[] options = {"Next stage"};
+			JOptionPane.showOptionDialog (mazeFrame.getFrame(), "Congratulation, you just finished this stage!\n" +
+								"Are you ready to go to the next stage?","Stage " + (g.getLevel()+1) + " cleared!", 	
 								JOptionPane.OK_OPTION,JOptionPane.PLAIN_MESSAGE,
 								new ImageIcon(this.getClass().getResource("/img/door_open.gif")),options,options[0]);
 			g.checkNextLevel(); 
@@ -66,7 +66,7 @@ public class GameManager {
     private void showGameFrame() {
     	if (g.getLevel() == Game.MAX_LEVEL) {
     		Object[] options = {"Exit"};
-			JOptionPane.showOptionDialog (this.mazeFrame.getFrame(), "Congratulations, warrior!\n" +
+			JOptionPane.showOptionDialog (this.mazeFrame.getFrame(), "Congratulations!\n" +
 						"Your skill is worthy of mention but who knows\n" + "what challenges we may see ahead?\n"
 						+ "We will require your assistance when the time comes...",
 						"Tower cleared!", 1,0,new ImageIcon(this.getClass().getResource("/img/door_open.gif")), options, options[0]);

@@ -58,13 +58,13 @@ public class InstructionFrame {
 		JLabel keyboard = new JLabel(new ImageIcon(wasd));
 		JLabel howtoplay = new JLabel(new ImageIcon(htp));
 		
-		sword.setText("Pick this up to kill the ghosts!");
-		key.setText("Pick this up to open the door at the end of the maze");
-		coin.setText("Cash money, Cash money");
-		enemy.setText("Game over if you get too close");
-		enemyF.setText("Chomp them when they're looking scared like this");
+		sword.setText("Can make you kill the ghosts.");
+		key.setText("Make sure to pick this up to open the door.");
+		coin.setText("Collect this to increase your score.");
+		enemy.setText("You'll die if they catch you.");
+		enemyF.setText("When they freeze, go through them.");
 		keyboard.setText("Use arrow keys or WASD to move around");
-		freeze.setText("Pick this up to freeze and eat your enemies");
+		freeze.setText("Pick this up to freeze the ghosts.");
 		
 		GridBagConstraints c= new GridBagConstraints();
 		c.fill = GridBagConstraints.VERTICAL;

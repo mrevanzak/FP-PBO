@@ -31,7 +31,7 @@ public class GameFrame {
 		frame.setLayout(new GridBagLayout());
 		frame.getContentPane().setBackground(Color.WHITE);
 
-		ImageIcon link = new ImageIcon(GameFrame.this.getClass().getResource("/img/linkImage.gif"));
+		ImageIcon link = new ImageIcon(GameFrame.this.getClass().getResource("/img/max-home.gif"));
 		JLabel linkImage = new JLabel(link);
 		
 		ImageIcon title = new ImageIcon(GameFrame.this.getClass().getResource("/img/mazerunner.png"));
@@ -50,7 +50,7 @@ public class GameFrame {
 		c.gridy = 15;
 		c.gridx = 3;
 		c.fill = GridBagConstraints.HORIZONTAL;
-		c.insets = new Insets(0,250,0,0);
+		c.insets = new Insets(-50,200,0,0);
 	    frame.add(linkImage, c);
 	    
 		c.gridwidth = 1;
@@ -103,7 +103,7 @@ public class GameFrame {
 		
 		c.gridy = 26;
 	    c.gridx = 6;
-	    exitButton = new JButton("EXIT");
+	    exitButton = new JButton("Exit");
 		this.exitButton.setBackground(Color.WHITE);
 		frame.add(exitButton,c);		
 		this.exitButton.addActionListener(new ActionListener() {

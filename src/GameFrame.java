@@ -31,8 +31,8 @@ public class GameFrame {
 		frame.setLayout(new GridBagLayout());
 		frame.getContentPane().setBackground(Color.WHITE);
 
-		ImageIcon link = new ImageIcon(GameFrame.this.getClass().getResource("/img/max-home.gif"));
-		JLabel linkImage = new JLabel(link);
+		ImageIcon max = new ImageIcon(GameFrame.this.getClass().getResource("/img/max-home.gif"));
+		JLabel maxImage = new JLabel(max);
 		
 		ImageIcon title = new ImageIcon(GameFrame.this.getClass().getResource("/img/mazerunner.png"));
 		JLabel titleImage = new JLabel(title);
@@ -51,7 +51,7 @@ public class GameFrame {
 		c.gridx = 3;
 		c.fill = GridBagConstraints.HORIZONTAL;
 		c.insets = new Insets(-50,200,0,0);
-	    frame.add(linkImage, c);
+	    frame.add(maxImage, c);
 	    
 		c.gridwidth = 1;
 		c.gridheight = 1;

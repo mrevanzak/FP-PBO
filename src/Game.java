@@ -34,7 +34,7 @@ public class Game {
         isGameOver = false;
         inGame = false;
         
-		player = new Player("Default", "link");
+		player = new Player("Default", "max");
         score = 0;	
         level = 0;	
         difficulty = MEDIUM;

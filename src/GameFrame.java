@@ -42,24 +42,25 @@ public class GameFrame {
 	    c.gridheight = 15;
 	    c.gridwidth = 10;
 	    c.gridy = 0;
-	    c.gridx = 0;
+	    c.gridx = 1;
 	    frame.add(titleImage,c);
 	    
-		c.gridwidth = 4;
+		c.gridwidth = 2;
 		c.gridheight = 10;
 		c.gridy = 15;
-		c.gridx = 3;
-		c.fill = GridBagConstraints.HORIZONTAL;
-		c.insets = new Insets(-50,200,0,0);
+		c.gridx = 4;
+		c.fill = GridBagConstraints.BOTH;
+		c.insets = new Insets(-50,120,0,120);
 	    frame.add(maxImage, c);
 	    
 		c.gridwidth = 1;
 		c.gridheight = 1;
 		
-	    c.gridy = 26;
-	    c.gridx = 3;
-	    c.insets = new Insets(0,200,0,0);
+	    c.gridy = 20;
+	    c.gridx = 6;
+	    c.insets = new Insets(0,0,0,0);
 	    playButton = new JButton("Play Game!");
+		playButton.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		this.playButton.setBackground(Color.WHITE);
 		frame.add(playButton,c); 
 		this.playButton.addActionListener(new ActionListener() {
@@ -74,11 +75,12 @@ public class GameFrame {
 				}
 			}
 		});
-		c.insets = new Insets(0,0,0,0);
 		
-		c.gridy = 26;
-	    c.gridx = 4;
+		c.insets = new Insets(0,0,0,0);
+		c.gridy = 21;
+	    c.gridx = 6;
 	    howButton = new JButton("How to Play");
+		howButton.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		this.howButton.setBackground(Color.WHITE);
 		this.howButton.setEnabled(true);
 		frame.add(howButton,c);
@@ -88,9 +90,11 @@ public class GameFrame {
 			}
 		});
 
-		c.gridy = 26;
-	    c.gridx = 5;
+		c.insets = new Insets(0,0,0,0);
+		c.gridy = 22;
+	    c.gridx = 6;
 	    aboutButton = new JButton("About");
+		aboutButton.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		this.aboutButton.setBackground(Color.WHITE);
 		this.aboutButton.setEnabled(true);
 		frame.add(aboutButton,c);
@@ -99,11 +103,12 @@ public class GameFrame {
 				about.setVisible(true);
 			}
 		});
-
 		
-		c.gridy = 26;
+		c.insets = new Insets(0,0,0,0);
+		c.gridy = 23;
 	    c.gridx = 6;
 	    exitButton = new JButton("Exit");
+		exitButton.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		this.exitButton.setBackground(Color.WHITE);
 		frame.add(exitButton,c);		
 		this.exitButton.addActionListener(new ActionListener() {

@@ -57,10 +57,10 @@ public class OptionPanel extends JPanel {
 		nameField.setPreferredSize(new Dimension(200,20));
 
 		gbc.gridy = 1;
-		gbc.gridx = 1;
+		gbc.gridx = 0;
 		gbc.insets = new Insets(20,20,0,0);
 		
-		JLabel nameText = new JLabel(String.format("Enter name"));
+		JLabel nameText = new JLabel(String.format("Name:"));
 		this.add(nameText, gbc);
 		
 		gbc.gridx = 1;

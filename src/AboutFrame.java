@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -18,6 +19,7 @@ public class AboutFrame {
         frame = new JFrame("About");
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         backButton = new JButton("Close");
+        backButton.setFont(new Font("Times New Roman", Font.PLAIN, 16));
         about = new JPanel(new GridBagLayout());
         backButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
@@ -45,7 +47,8 @@ public class AboutFrame {
         "        "+
         "    <p style=\"text-indent: 30px;\">Permainan ini dimainkan di PC dengan menggunakan control button keyboard yakni 'W', 'A', 'S', 'D' atau Arrow Button untuk menjalankan player. "+
         "        Game ini dilengkapi dengan level up system yang akan menjadi daya tarik bagi pemain untuk mengasah logika dan keterampilan dalam menyelesaikan variasi tantangan.</p>");
-            
+        
+        description.setFont(new Font("Times New Roman", Font.PLAIN, 13));    
         GridBagConstraints c = new GridBagConstraints();
 
         c.fill = GridBagConstraints.CENTER;

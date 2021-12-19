@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -20,9 +21,11 @@ public class InstructionFrame {
 	
 	public InstructionFrame () {
 		frame = new JFrame();	
-		frame.setTitle("How to Play");		
+		frame.setTitle("How to Play");
+		frame.setFont(new Font("Times New Roman", Font.PLAIN, 16));	
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		backButton = new JButton("Close");	
+		backButton = new JButton("Close");
+		backButton.setFont(new Font("Times New Roman", Font.PLAIN, 16));	
 		instructions = new JPanel(new GridBagLayout());
 		backButton.addActionListener(new ActionListener() {	
 			public void actionPerformed(ActionEvent e) {
@@ -59,12 +62,19 @@ public class InstructionFrame {
 		JLabel howtoplay = new JLabel(new ImageIcon(htp));
 		
 		sword.setText("Can make you kill the ghosts.");
+		sword.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		key.setText("Make sure to pick this up to open the door.");
+		key.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		coin.setText("Collect this to increase your score.");
+		coin.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		enemy.setText("You'll die if they catch you.");
+		enemy.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		enemyF.setText("When they freeze, go through them.");
+		enemyF.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		keyboard.setText("Use arrow keys or WASD to move around");
+		keyboard.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		freeze.setText("Pick this up to freeze the ghosts.");
+		freeze.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		
 		GridBagConstraints c= new GridBagConstraints();
 		c.fill = GridBagConstraints.VERTICAL;
